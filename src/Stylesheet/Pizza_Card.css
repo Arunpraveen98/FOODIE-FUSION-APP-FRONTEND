@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+.pizza-cards {
+   /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  border-radius: 5px; */
+  background-color: whitesmoke; 
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 3px, rgba(0, 0, 0, 0.23) 0px 2px 3px ;
+  /* background-color: aliceblue; */
+  /* background-image: linear-gradient(
+    90.5deg,
+    rgba(255, 207, 139, 0.5) 1.1%,
+    rgba(255, 207, 139, 1) 81.3%
+  ); */
+  border-radius: 10px;
+  border: 1px solid rgba(47, 47, 47, 0.18);
+  position: relative;
+  height: 400px;
+  width: 350px;
+  margin-top: 10px;
+}
+.shadow-inset-center:hover {
+	-webkit-animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes shadow-inset-center {
+  0% {
+    -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes shadow-inset-center {
+  0% {
+    -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+
+
+.pizza-cards:hover {
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 7px, rgba(0, 0, 0, 0.23) 0px 4px 7px ; */
+  /* border: 4px solid rgba(47, 47, 47, 0.18); */
+  /* border: 4px solid rgba(218, 165, 32, 0.648); */
+}
+.card-images-div {
+  max-height: 280px;
+  transition: transform 0.3s ease;
+}
+.card-images-div:hover {
+  transform: scale(1.1);
+}
+.card-image-title {
+  font-size: 18px;
+  max-height: 25px;
+  font-family: "Reggae One", cursive;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  background-color: #0e1822;
+  color: white;
+  border-radius: 5px;
+  /* border: 1px solid black; */
+  padding: 8px;
+  position: relative;
+  bottom: 20px;
+}
+.card-subtitle {
+  font-size: 17px;
+  margin-bottom: 5px;
+  font-family: "Reggae One", cursive;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+.items-options-div {
+  font-family: "Reggae One", cursive;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+}
+.options {
+  width: 130px;
+}
+.card-images {
+  width: 180px;
+  height: 180px;
+  padding: 5px;
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+  /* background-color: rgba(218, 165, 32, 0.712); */
+}
+
+.card-images:hover {
+  cursor: pointer;
+}
+
+.cart-price {
+  font-family: "Reggae One", cursive;
+  font-size: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #0e1822;
+  margin-right: 10px;
+  border-radius: 10px;
+  position: relative;
+  bottom: 5px;
+  letter-spacing: 0.5px;
+}
+.item-price {
+  color: yellow;
+}
+.card-footer-div {
+  display: flex;
+  width: 100%;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  /* border: 2px solid black; */
+}
+.primary-button {
+  width: 130px;
+  height: 35px;
+  font-family: "Ropa Sans", sans-serif;
+  /* font-family: 'Valorant', sans-serif; */
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  border: 1px solid #0e1822;
+  border-radius: 5px;
+  padding: 5px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.28 200'%3E%3Cdefs%3E%3Cstyle%3E .shape %7B fill: %23FF4655 /* fill: %230E1822; */ %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='shape' points='415.81 200 0 200 115.47 0 531.28 0 415.81 200' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  background-color: #0e1822;
+  background-size: 200%;
+  background-position: 200%;
+  background-repeat: no-repeat;
+  transition: 0.3s ease-in-out;
+  transition-property: background-position, border, color;
+  position: relative;
+  /* z-index: 1; */
+}
+
+.primary-button:hover {
+  border: 1px solid #ff4655;
+  color: white;
+  background-position: 40%;
+}
+
+.primary-button:before {
+  content: "";
+  position: absolute;
+  background-color: #0e1822;
+  width: 0.1rem;
+  height: 0.1rem;
+  top: -1px;
+  left: -1px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.primary-button:hover:before {
+  background-color: white;
+}
+
+.primary-button:hover:after {
+  background-color: white;
+}
+
+.primary-button:after {
+  content: "";
+  position: absolute;
+  background-color: #ff4655;
+  width: 0.2rem;
+  height: 0.2rem;
+  bottom: -1px;
+  right: -1px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.button-borders {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.button-borders:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 0.5em);
+  height: 50%;
+  left: -0.3em;
+  top: -0.3em;
+  border: 1px solid #0e1822;
+  /* border-radius: 5px; */
+  border-bottom: 0px;
+  /* opacity: 0.3; */
+}
+
+.button-borders:after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 0.5em);
+  height: 50%;
+  left: -0.3em;
+  bottom: -0.3em;
+  border: 1px solid #0e1822;
+  /* border-radius: 5px; */
+  border-top: 0px;
+  /* opacity: 0.3; */
+  z-index: 0;
+}
+
+.shape {
+  fill: #0e1822;
+}
+
+.modal-close-btn{
+  background-color: rgba(255, 0, 0, 0.756);
+  box-shadow: rgba(225, 61, 61, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  letter-spacing: 0.5px;
+  padding: 8px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.modal-close-btn:hover{
+
+}

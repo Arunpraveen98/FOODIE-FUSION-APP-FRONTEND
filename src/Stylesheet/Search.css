@@ -1,0 +1,173 @@
+.navbar-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar {
+  margin-right: 10px;
+  margin-top: 5px;
+  /* border:  1px solid rgba(197, 227, 253, 0.589);
+    border-radius: 15px; */
+}
+.search-bar::after {
+  border: none;
+}
+.search-options {
+  font-family: "Caveat Brush", cursive;
+  letter-spacing: 1px;
+  margin-right: 10px;
+}
+/* .search-button{
+    background-color: rgb(31, 231, 151);
+} */
+.search-button {
+  --color: #00a97f;
+  padding: 6px;
+  background-color: transparent;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: "Caveat Brush", cursive;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+}
+
+.search-button::before,
+.search-button::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+
+.search-button::before {
+  top: -1em;
+  left: -1em;
+}
+
+.search-button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.search-button:hover::before,
+.search-button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.search-button:hover {
+  color: white;
+}
+
+.search-button:active {
+  filter: brightness(0.8);
+}
+
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+@media screen and (min-width: 320px) and (max-width: 1080px) {
+  .search-bar {
+    margin-right: 5px !important;
+  }
+  .form {
+    --width-of-input: 150px !important;
+  }
+  .search-button {
+    padding: 6px;
+
+    font-weight: 400;
+    font-size: 12px;
+
+    letter-spacing: 2px;
+  }
+
+  .search-icon {
+    display: none;
+  }
+}
+.form .serach-svg {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+  width: 20px;
+}
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #2f2ee9;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg, #fff);
+}
+/* styling of Input */
+.search-input {
+  font-size: 0.9rem;
+  font-family: "Caveat Brush", cursive;
+  letter-spacing: 2px;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+
+/* sizing svg icons */
+.form svg {
+  width: 18px;
+  margin-top: 3px;
+}

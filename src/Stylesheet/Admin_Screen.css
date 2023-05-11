@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+.admin-screen-div {
+  margin-top: 80px;
+}
+.adminfunctions {
+  padding: 10px;
+
+  /* background-color: rgb(1, 1, 77); */
+}
+.admin-panel-title {
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  font-size: 35px;
+  letter-spacing: 1px;
+}
+.All-list-title {
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  font-size: 35px;
+  letter-spacing: 1px;
+}
+.adminfunctions li {
+  /* border: 1px solid rgb(1, 1, 77); */
+  padding: 8px;
+  margin-top: 5px;
+  margin-right: 10px;
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 5px;
+  font-family: "Ropa Sans", sans-serif;
+  display: inline-block;
+}
+.adminfunctions li:hover {
+  background-color: rgb(29, 135, 206);
+}
+.admin-list {
+  color: white;
+  text-decoration: none !important;
+  letter-spacing: 1px;
+}
+.admin-list:hover {
+  color: white;
+}
+td,
+th,
+tr {
+  /* text-align: left; */
+  letter-spacing: 1px;
+}
+
+.table-head {
+  background-color: rgb(84, 183, 236);
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+.user-id {
+  background-color: rgba(109, 109, 102, 0.169) !important;
+  padding: 3px;
+}
+.order-id {
+  background-color: rgba(237, 40, 230, 0.169) !important;
+  padding: 3px;
+}
+.deliver-btn {
+  color: rgba(31, 220, 31, 0.838);
+  font-size: 18px;
+  text-shadow: 0.2px 0.2px 0.5px rgba(0, 0, 0, 0.473);
+}
+.deliver-order-btn {
+  color: red;
+  border-radius: 5px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  background-color: rgba(135, 206, 250, 0.388);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 3px, rgba(0, 0, 0, 0.23) 0px 2px 3px;
+}
+.deliver-order-btn:hover {
+  color: rgba(31, 220, 31, 0.838);
+}
+.fa-trash {
+  cursor: pointer;
+}
+/* .table-bordered {
+  border: 5px solid black;
+} */
+.a {
+  border: 2px solid black;
+}
+.form-div {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  justify-content: center;
+  align-items: center;
+}
+.input-div {
+  margin: 5px;
+}
+.input-label {
+  text-align: left !important;
+  font-family: "Ropa Sans", sans-serif;
+  color: rgb(40, 153, 223);
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin: 5px;
+}
+/* .form-control{
+  display: flex !important;
+} */
+.pizza-btn {
+  background-color: rgba(1, 1, 77, 0.797);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  letter-spacing: 0.5px;
+  padding: 8px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.pizza-btn:hover {
+  background-color: rgba(0, 128, 0, 0.849);
+}
+.shadow-lg {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px !important;
+}
+.orders-table {
+  margin-top: 20px;
+}
+.orders-table-head {
+  background-color: rgb(84, 183, 236) !important;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+.orders-table-body {
+  text-align: left;
+}
+.orders-key-name {
+  background-color: rgba(70, 71, 67, 0.502);
+  border: none;
+  border-radius: 5px;
+  text-shadow: 0.3px 0.3px 0.6px rgb(0, 0, 0);
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+}
+.orders-status-delivered {
+  color: red;
+}
+.orders-status-shipping {
+  font-weight: 600;
+  margin-left: 5px;
+  color: rgb(25, 205, 25);
+}
