@@ -12,7 +12,7 @@ export default function Pizzaslist() {
   // -----------------------
   const dispatch = useDispatch();
   // -----------------------
-  const pizzasstate = useSelector((state) => state.getAllPizzasReducer);
+  const pizzasstate = useSelector((state) => state.getAllFoodItemsReducer);
   const { pizzas, error, loading } = pizzasstate;
   // -----------------------
   useEffect(() => {

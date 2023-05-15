@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 //? It returns an asynchronous function that takes `dispatch` as an argument
 export const getAllFoodItems = () => async (dispatch) => {
   //? Dispatch an action object with type `GET_PIZZAS_REQUEST`
-  dispatch({ type: "GET_PIZZAS_REQUEST" });
+  dispatch({ type: "GET_FOODS_REQUEST" });
   //? Use a try-catch block to handle any errors that may occur during the axios request
   try {
     //? Use axios to send a GET request to the specified API endpoint
@@ -16,17 +16,17 @@ export const getAllFoodItems = () => async (dispatch) => {
     );
     // console.log(response);
     //? Dispatch an action object with type `GET_PIZZAS_SUCCESS` and the response data as the payload
-    dispatch({ type: "GET_PIZZAS_SUCCESS", payload: response.data });
+    dispatch({ type: "GET_FOODS_SUCCESS", payload: response.data });
     //? If an error occurs during the axios request, catch it and handle it here
   } catch (error) {
     console.log(error);
     //? Dispatch an action object with type `GET_PIZZAS_FAILED` and the error as the payload
-    dispatch({ type: "GET_PIZZAS_FAILED", payload: error });
+    dispatch({ type: "GET_FOODS_FAILED", payload: error });
   }
 };
 // -----------------------
 export const getFoodItemsById = (pizzaid) => async (dispatch) => {
-  dispatch({ type: "GET_PIZZABYID_REQUEST" });
+  dispatch({ type: "GET_FOODS_BY_ID_REQUEST" });
   try {
     const verify_user = authorize();
     const response = await axios.post(
@@ -39,15 +39,15 @@ export const getFoodItemsById = (pizzaid) => async (dispatch) => {
       }
     );
     // console.log(response);
-    dispatch({ type: "GET_PIZZABYID_SUCCESS", payload: response.data });
+    dispatch({ type: "GET_FOODS_BY_ID_SUCCESS", payload: response.data });
   } catch (error) {
     console.log(error);
-    dispatch({ type: "GET_PIZZABYID_FAILED", payload: error });
+    dispatch({ type: "GET_FOODS_BY_ID_FAILED", payload: error });
   }
 };
 // -----------------------
 export const filterPizzas = (searchkey, category) => async (dispatch) => {
-  dispatch({ type: "GET_PIZZAS_REQUEST" });
+  dispatch({ type: "GET_FOODS_REQUEST" });
   try {
     // console.log(searchkey,category)
     var filteredPizzas;
@@ -63,15 +63,15 @@ export const filterPizzas = (searchkey, category) => async (dispatch) => {
       );
     }
     // console.log(filterPizzas)
-    dispatch({ type: "GET_PIZZAS_SUCCESS", payload: filteredPizzas });
+    dispatch({ type: "GET_FOODS_SUCCESS", payload: filteredPizzas });
   } catch (error) {
     console.log(error);
-    dispatch({ type: "GET_PIZZAS_FAILED", payload: error });
+    dispatch({ type: "GET_FOODS_FAILED", payload: error });
   }
 };
 // -----------------------
 export const Add_Foods = (Foods) => async (dispatch) => {
-  dispatch({ type: "ADD_PIZZA_REQUEST" });
+  dispatch({ type: "ADD_FOODS_REQUEST" });
   try {
     const verify_user = authorize();
     const response = await axios.post(
@@ -84,15 +84,18 @@ export const Add_Foods = (Foods) => async (dispatch) => {
       }
     );
     // console.log(response);
-    dispatch({ type: "ADD_PIZZA_SUCCESS" });
+    dispatch({ type: "ADD_FOODS_SUCCESS" });
+    setTimeout(() => {
+      window.location.href = "/admin/Foodslist";
+    }, 2000);
   } catch (error) {
     console.log(error);
-    dispatch({ type: "ADD_PIZZA_FAILED", payload: error });
+    dispatch({ type: "ADD_FOODS_FAILED", payload: error });
   }
 };
 // -----------------------
 export const editPizza = (editedpizza) => async (dispatch) => {
-  dispatch({ type: "EDIT_PIZZA_REQUEST" });
+  dispatch({ type: "EDIT_FOODS_REQUEST" });
   try {
     const verify_user = authorize();
     const response = await axios.post(
@@ -105,11 +108,13 @@ export const editPizza = (editedpizza) => async (dispatch) => {
       }
     );
     // console.log(response);
-    dispatch({ type: "EDIT_PIZZA_SUCCESS" });
-    window.location.href = "/admin/Foodslist";
+    dispatch({ type: "EDIT_FOODS_SUCCESS" });
+    setTimeout(() => {
+      window.location.href = "/admin/Foodslist";
+    }, 2000);
   } catch (error) {
     console.log(error);
-    dispatch({ type: "EDIT_PIZZA_FAILED", payload: error });
+    dispatch({ type: "EDIT_FOODS_FAILED", payload: error });
   }
 };
 // -----------------------
@@ -132,7 +137,6 @@ export const Delete_Food_Item = (FoodId) => async (dispatch) => {
       window.location.reload();
     }, 2000);
   } catch (error) {
-
     console.log(error);
   }
 };

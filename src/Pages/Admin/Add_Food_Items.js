@@ -10,9 +10,9 @@ export default function Addpizza() {
   // -----------------------
   const dispatch = useDispatch();
 
-  const addpizzastate = useSelector((state) => state.addPizzaReducer);
+  const addpizzastate = useSelector((state) => state.addFoodItemsReducer);
   const { success, error, loading } = addpizzastate;
-// -----------------------
+  // -----------------------
   const Input_Form_Validation = useFormik({
     //? Default initial value for input fields...
     initialValues: {
@@ -81,7 +81,7 @@ export default function Addpizza() {
       try {
         // setBtn_loading(false);
         //--------------------------------------------------------------------
-        const Foods= {
+        const Foods = {
           name: values.name,
           image: values.image,
           description: values.description,
@@ -105,7 +105,7 @@ export default function Addpizza() {
       }
     },
   });
-// -----------------------
+  // -----------------------
   return (
     <div>
       <div className="text-left shadow-lg  p-3 mb-5  bg-white  rounded">

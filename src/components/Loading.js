@@ -1,6 +1,6 @@
 import React from "react";
 // -----------------------
-export default function Loading() {
+function Loading() {
   return (
     <div className="text-center">
       <div>
@@ -14,3 +14,4 @@ export default function Loading() {
   );
 }
 // -----------------------
+export default Loading;

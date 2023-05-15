@@ -43,12 +43,12 @@ export const loginUser = (user) => async (dispatch) => {
       toast.success("Successfully Admin Logged-in", { autoClose: 2000 });
       setTimeout(() => {
         window.location.href = "/admin";
-      }, 2000); // Redirect after 2 seconds
+      }, 2000);
     } else {
       toast.success("Successfully User logged in", { autoClose: 2000 });
       setTimeout(() => {
         window.location.href = "/";
-      }, 2000); // Redirect after 2 seconds
+      }, 2000);
     }
   } catch (error) {
     console.log(error);
@@ -61,7 +61,10 @@ export const logoutUser = () => (dispatch) => {
   localStorage.removeItem("currentUser");
   localStorage.removeItem("cartItems");
   JSON.stringify(window.localStorage.setItem("AdminUser", false));
-  window.location.href = "/login";
+  toast.success("Logged out successfully👋", { autoClose: 2000 });
+  setTimeout(() => {
+    window.location.href = "/login";
+  }, 2000);
 };
 // -----------------------
 export const getAllUsers = () => async (dispatch) => {
@@ -92,7 +95,6 @@ export const deleteUser = (userid) => async (dispatch) => {
     alert("User deleted successfully");
     window.location.reload();
   } catch (error) {
-
     console.log(error);
   }
 };

@@ -5,7 +5,7 @@ import "../Stylesheet/Search.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 // -----------------------
-export default function Filter() {
+function Searchbar() {
   // -----------------------
   const dispatch = useDispatch();
 
@@ -15,7 +15,6 @@ export default function Filter() {
   return (
     <div className="navbar-filter">
       <div className="search-bar">
-
         <form class="form">
           <div className="serach-svg">
             <svg
@@ -47,7 +46,6 @@ export default function Filter() {
             type="text"
           />
         </form>
-
       </div>
 
       <div className="search-options">
@@ -73,7 +71,7 @@ export default function Filter() {
           <FontAwesomeIcon className="search-icon" icon={faSearch} /> Search
         </button>
       </div>
-      
     </div>
   );
 }
+export default Searchbar;

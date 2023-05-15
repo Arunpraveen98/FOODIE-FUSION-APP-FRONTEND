@@ -17,9 +17,9 @@ export default function Editpizza({ match }) {
   const [description, setdescription] = useState("");
   const [category, setcategory] = useState("");
 // -----------------------
-  const getpizzabyidstate = useSelector((state) => state.getPizzaByIdReducer);
+  const getpizzabyidstate = useSelector((state) => state.getFoodItemsByIdReducer);
   const { pizza, error, loading } = getpizzabyidstate;
-  const editpizzastate = useSelector((state) => state.editPizzaReducer);
+  const editpizzastate = useSelector((state) => state.editFoodItemsReducer);
   const { editloading, editsuccess } = editpizzastate;
 // -----------------------
   useEffect(() => {

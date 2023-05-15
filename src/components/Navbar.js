@@ -12,9 +12,9 @@ import {
   faUserGear,
 } from "@fortawesome/free-solid-svg-icons";
 import "../Stylesheet/Navbar.css";
-import Filter from "./Filter";
+import Searchbar from "./SearchBar";
 // -----------------------
-export default function Navbar() {
+function Navbar() {
   // -----------------------
   const cartstate = useSelector((state) => state.cartReducer);
   const userstate = useSelector((state) => state.loginUserReducer);
@@ -58,7 +58,7 @@ export default function Navbar() {
           />
         </a>
 
-        <Filter />
+        <Searchbar />
 
         <button
           className="navbar-toggler"
@@ -76,7 +76,6 @@ export default function Navbar() {
           }`}
           id="navbarNav"
         >
-
           <ul className="navbar-nav ml-auto">
             {currentUser ? (
               <>
@@ -132,7 +131,6 @@ export default function Navbar() {
                       )}
                     </div>
                   </div>
-
                 </div>
               </>
             ) : (
@@ -157,3 +155,4 @@ export default function Navbar() {
   );
 }
 // -----------------------
+export default Navbar;

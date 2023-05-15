@@ -3,17 +3,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllFoodItems } from "../../actions/Food_Items_Actions";
 import Error from "../../components/Error";
 import Loading from "../../components/Loading";
-import Pizza from "../../components/Pizza";
 import Footer from "./Home_Footer";
 import Home from "./Home_Header";
 import "../../Stylesheet/Pagination.css";
+import Foods from "../../components/FoodItems";
 // -----------------------
 
 // -----------------------
 
 export default function Homescreen() {
   const dispatch = useDispatch();
-  const pizzasstate = useSelector((state) => state.getAllPizzasReducer);
+  const pizzasstate = useSelector((state) => state.getAllFoodItemsReducer);
   const { pizzas, error, loading } = pizzasstate;
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
@@ -53,7 +53,7 @@ export default function Homescreen() {
           currentItems.map((pizza, index) => (
             <div className="col-md-3 m-3" key={index}>
               <div>
-                <Pizza pizza={pizza} />
+                <Foods pizza={pizza} />
               </div>
             </div>
           ))

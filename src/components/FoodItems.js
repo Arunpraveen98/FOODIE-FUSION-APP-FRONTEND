@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../actions/Cart_Actions";
-import "../Stylesheet/Pizza_Card.css";
+import "../Stylesheet/Foods_Card.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 // -----------------------
-export default function Pizza({ pizza }) {
+function Foods({ pizza }) {
   const [quantity, setquantity] = useState(1);
   const [varient, setvarient] = useState("small");
   const [show, setShow] = useState(false);
@@ -111,3 +111,4 @@ export default function Pizza({ pizza }) {
     </div>
   );
 }
+export default Foods;

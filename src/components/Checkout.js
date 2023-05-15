@@ -7,7 +7,7 @@ import Loading from "../components/Loading";
 import Success from "../components/Success";
 import { toast } from "react-toastify";
 
-export default function Checkout({ subtotal }) {
+function Checkout({ subtotal }) {
   const orderstate = useSelector((state) => state.placeOrderReducer);
   const { loading, error, success } = orderstate;
   const [userExists, setUserExists] = useState(false);
@@ -54,3 +54,4 @@ export default function Checkout({ subtotal }) {
     </div>
   );
 }
+export default Checkout;

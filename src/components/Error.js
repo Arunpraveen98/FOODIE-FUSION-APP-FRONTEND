@@ -1,7 +1,7 @@
 import React from "react";
 import { toast } from "react-toastify";
 // -----------------------
-export default function Error({ error, toastmessage }) {
+function Error({ error, toastmessage }) {
   //? React toastify...
   const toastOptions = {
     position: "top-center",
@@ -14,7 +14,7 @@ export default function Error({ error, toastmessage }) {
   if (toastmessage !== "") {
     toast.error(toastmessage, toastOptions);
   }
-// -----------------------
+  // -----------------------
   return (
     <div>
       <div className="alert alert-danger" role="alert">
@@ -23,3 +23,4 @@ export default function Error({ error, toastmessage }) {
     </div>
   );
 }
+export default Error;

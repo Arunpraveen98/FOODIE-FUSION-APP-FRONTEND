@@ -1,48 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
 .pizza-cards {
-   /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-  border-radius: 5px; */
-  background-color: whitesmoke; 
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 3px, rgba(0, 0, 0, 0.23) 0px 2px 3px ;
-  /* background-color: aliceblue; */
+  /* background: rgba( 255, 255, 255, 0 ); */
+  box-shadow: rgba(0, 0, 0, 0.153) 0px 5px 15px;
+  /* backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px ); */
+  /* border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+
+  /* background-color: aliceblue;  */
+
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 3px, rgba(0, 0, 0, 0.23) 0px 2px 3px ; */
   /* background-image: linear-gradient(
     90.5deg,
     rgba(255, 207, 139, 0.5) 1.1%,
     rgba(255, 207, 139, 1) 81.3%
   ); */
   border-radius: 10px;
-  border: 1px solid rgba(47, 47, 47, 0.18);
+  border: 2px solid rgba(47, 47, 47, 0.18);
   position: relative;
   height: 400px;
-  width: 350px;
+  width: 340px;
   margin-top: 10px;
 }
 .shadow-inset-center:hover {
-	-webkit-animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: shadow-inset-center 0.4s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: shadow-inset-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 @-webkit-keyframes shadow-inset-center {
   0% {
     -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
-            box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
   }
   100% {
     -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
-            box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
   }
 }
 @keyframes shadow-inset-center {
   0% {
     -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
-            box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
   }
   100% {
     -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
-            box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
   }
 }
-
 
 .pizza-cards:hover {
   /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
@@ -54,6 +59,9 @@
 .card-images-div {
   max-height: 280px;
   transition: transform 0.3s ease;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 .card-images-div:hover {
   transform: scale(1.1);
@@ -89,10 +97,11 @@
   width: 130px;
 }
 .card-images {
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   padding: 5px;
-  clip-path: polygon(
+  margin-bottom: 5px;
+  /* clip-path: polygon(
     30% 0%,
     70% 0%,
     100% 30%,
@@ -101,8 +110,11 @@
     30% 100%,
     0% 70%,
     0% 30%
-  );
-  /* background-color: rgba(218, 165, 32, 0.712); */
+  ); */
+  border-radius: 50%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  /* background-color: #0e182228; */
 }
 
 .card-images:hover {
@@ -231,7 +243,7 @@
   fill: #0e1822;
 }
 
-.modal-close-btn{
+.modal-close-btn {
   background-color: rgba(255, 0, 0, 0.756);
   box-shadow: rgba(225, 61, 61, 0.16) 0px 3px 6px,
     rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -241,6 +253,5 @@
   border: none;
   border-radius: 5px;
 }
-.modal-close-btn:hover{
-
+.modal-close-btn:hover {
 }

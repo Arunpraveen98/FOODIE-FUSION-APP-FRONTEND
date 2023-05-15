@@ -1,8 +1,8 @@
-
 // -----------------------
 
-export const addToCart = (pizza, quantity, varient) => (dispatch, getState) => {
+import { toast } from "react-toastify";
 
+export const addToCart = (pizza, quantity, varient) => (dispatch, getState) => {
   var cartItem = {
     name: pizza.name,
     _id: pizza._id,
@@ -13,7 +13,7 @@ export const addToCart = (pizza, quantity, varient) => (dispatch, getState) => {
     price: pizza.prices[0][varient] * quantity,
   };
   if (cartItem.quantity > 10) {
-    alert("You cannot add more than 10 quantities");
+    toast.error("You cannot add more than 10 quantities", { autoClose: 2000 });
   } else {
     if (cartItem.quantity < 1) {
       dispatch({ type: "DELETE_FROM_CART", payload: pizza });

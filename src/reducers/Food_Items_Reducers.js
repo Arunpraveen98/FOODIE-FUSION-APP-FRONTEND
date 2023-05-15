@@ -1,16 +1,16 @@
-export const getAllPizzasReducer = (state = { pizzas: [] }, action) => {
+export const getAllFoodItemsReducer = (state = { pizzas: [] }, action) => {
   switch (action.type) {
-    case "GET_PIZZAS_REQUEST":
+    case "GET_FOODS_REQUEST":
       return {
         loading: true,
         ...state,
       };
-    case "GET_PIZZAS_SUCCESS":
+    case "GET_FOODS_SUCCESS":
       return {
         loading: false,
         pizzas: action.payload,
       };
-    case "GET_PIZZAS_FAILED":
+    case "GET_FOODS_FAILED":
       return {
         error: action.payload,
         loading: false,
@@ -20,19 +20,19 @@ export const getAllPizzasReducer = (state = { pizzas: [] }, action) => {
   }
 };
   // -----------------------
-export const getPizzaByIdReducer = (state = {}, action) => {
+export const getFoodItemsByIdReducer = (state = {}, action) => {
   switch (action.type) {
-    case "GET_PIZZABYID_REQUEST":
+    case "GET_FOODS_BY_ID_REQUEST":
       return {
         loading: true,
         ...state,
       };
-    case "GET_PIZZABYID_SUCCESS":
+    case "GET_FOODS_BY_ID_SUCCESS":
       return {
         loading: false,
         pizza: action.payload,
       };
-    case "GET_PIZZABYID_FAILED":
+    case "GET_FOODS_BY_ID_FAILED":
       return {
         error: action.payload,
         loading: false,
@@ -42,19 +42,19 @@ export const getPizzaByIdReducer = (state = {}, action) => {
   }
 };
   // -----------------------
-export const addPizzaReducer = (state = {}, action) => {
+export const addFoodItemsReducer = (state = {}, action) => {
   switch (action.type) {
-    case "ADD_PIZZA_REQUEST":
+    case "ADD_FOODS_REQUEST":
       return {
         loading: true,
         ...state,
       };
-    case "ADD_PIZZA_SUCCESS":
+    case "ADD_FOODS_SUCCESS":
       return {
         loading: false,
         success: true,
       };
-    case "ADD_PIZZA_FAILED":
+    case "ADD_FOODS_FAILED":
       return {
         error: action.payload,
         loading: false,
@@ -64,19 +64,19 @@ export const addPizzaReducer = (state = {}, action) => {
   }
 };
   // -----------------------
-export const editPizzaReducer = (state = {}, action) => {
+export const editFoodItemsReducer = (state = {}, action) => {
   switch (action.type) {
-    case "EDIT_PIZZA_REQUEST":
+    case "EDIT_FOODS_REQUEST":
       return {
         editloading: true,
         ...state,
       };
-    case "EDIT_PIZZA_SUCCESS":
+    case "EDIT_FOODS_SUCCESS":
       return {
         editloading: false,
         editsuccess: true,
       };
-    case "EDIT_PIZZA_FAILED":
+    case "EDIT_FOODS_FAILED":
       return {
         editerror: action.payload,
         editloading: false,

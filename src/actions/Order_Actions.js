@@ -1,6 +1,7 @@
 import axios from "axios";
 import { config } from "../config";
 import { authorize } from "./Authorize";
+import { toast } from "react-toastify";
 // -----------------------
 export const placeOrder = (token, subtotal) => async (dispatch, getState) => {
   dispatch({ type: "PLACE_ORDER_REQUEST" });
@@ -78,7 +79,7 @@ export const deliverOrder = (orderid) => async (dispatch) => {
       }
     );
     // console.log(response);
-    alert("Order Delivered");
+    toast.success("Order Delivered",{autoClose:2000});
     const orders = await axios.get(`${config.api}/api/orders/getallorders`);
     dispatch({ type: "GET_ALLORDERS_SUCCESS", payload: orders.data });
   } catch (error) {

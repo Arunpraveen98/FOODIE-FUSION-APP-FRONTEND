@@ -3,10 +3,10 @@ import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 import {
-  getAllPizzasReducer,
-  addPizzaReducer,
-  getPizzaByIdReducer,
-  editPizzaReducer,
+  getAllFoodItemsReducer,
+  addFoodItemsReducer,
+  getFoodItemsByIdReducer,
+  editFoodItemsReducer,
 } from "./reducers/Food_Items_Reducers";
 import { cartReducer } from "./reducers/Cart_Reducer";
 import {
@@ -21,15 +21,15 @@ import {
 } from "./reducers/Order_Reducer";
 //  -------------------
 const finalReducer = combineReducers({
-  getAllPizzasReducer: getAllPizzasReducer,
+  getAllFoodItemsReducer: getAllFoodItemsReducer,
+  addFoodItemsReducer: addFoodItemsReducer,
+  getFoodItemsByIdReducer: getFoodItemsByIdReducer,
+  editFoodItemsReducer: editFoodItemsReducer,
   cartReducer: cartReducer,
   registerUserReducer: registerUserReducer,
   loginUserReducer: loginUserReducer,
   placeOrderReducer: placeOrderReducer,
   getUserOrdersReducer: getUserOrdersReducer,
-  addPizzaReducer: addPizzaReducer,
-  getPizzaByIdReducer: getPizzaByIdReducer,
-  editPizzaReducer: editPizzaReducer,
   getAllOrdersReducer: getAllOrdersReducer,
   getAllUsersReducer: getAllUsersReducer,
 });
